@@ -7,11 +7,16 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonToken;
+import com.navfirst.adjust.lib.domains.AdjustOptions;
+import com.navfirst.adjust.lib.domains.ENUNetworkProblem;
+import com.navfirst.adjust.lib.domains.GeodeticNetworkProblem;
 import com.navfirst.adjust.lib.exceptions.AdjustException;
 
 import java.io.IOException;
 import java.io.StringReader;
 import java.nio.charset.StandardCharsets;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * 创建：馥溪凝
@@ -20,9 +25,49 @@ import java.nio.charset.StandardCharsets;
  */
 public final class JsonUtils {
     private static final int MAX_REQUEST_BYTES = 64 * 1024 * 1024;
+    private static final long MAX_TIMEOUT_MS = Long.MAX_VALUE / 1_000_000;
     private static final Gson GSON = new GsonBuilder().disableHtmlEscaping().create();
 
     private JsonUtils() {
+    }
+
+    /** 将 ENU 输入和核心选项组装成 Go 请求信封。 */
+    public static String toRequestJson(ENUNetworkProblem problem, AdjustOptions options) {
+        return toRequestJson("problem", problem, options);
+    }
+
+    /** 将 WGS84 输入和核心选项组装成 Go 请求信封。 */
+    public static String toRequestJson(GeodeticNetworkProblem problem, AdjustOptions options) {
+        return toRequestJson("geodetic_problem", problem, options);
+    }
+
+    private static String toRequestJson(String field, Object problem, AdjustOptions options) {
+        if (problem == null) {
+            throw new AdjustException("invalid_request", "站网输入不能为空", field, null);
+        }
+        Long timeout = options == null ? null : options.getTimeoutMs();
+        if (timeout != null && (timeout < 0 || timeout > MAX_TIMEOUT_MS)) {
+            throw new AdjustException("invalid_request", "超时毫秒数必须在 0 到 " + MAX_TIMEOUT_MS + " 之间",
+                    "timeout_ms", null);
+        }
+
+        Map<String, Object> nativeOptions = new LinkedHashMap<>();
+        nativeOptions.put("solver", Map.of("method", "dense"));
+        nativeOptions.put("datum", "external");
+        nativeOptions.put("covariance_policy", "required");
+        nativeOptions.put("covariance", "station-blocks");
+        if (options != null && options.isRobust()) {
+            // 空配置对象启用 Go 默认 Huber 参数；关闭时完全省略 robust。
+            nativeOptions.put("robust", Map.of());
+        }
+
+        Map<String, Object> request = new LinkedHashMap<>();
+        request.put(field, problem);
+        request.put("options", nativeOptions);
+        if (timeout != null) {
+            request.put("timeout_ms", timeout);
+        }
+        return toJson(request);
     }
 
     /** 将对象序列化为 JSON，拒绝 NaN、Infinity 等无法通过协议传输的值。 */

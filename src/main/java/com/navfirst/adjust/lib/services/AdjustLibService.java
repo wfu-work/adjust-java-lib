@@ -1,7 +1,6 @@
 package com.navfirst.adjust.lib.services;
 
-import com.navfirst.adjust.lib.domains.AdjustRequest;
-import com.navfirst.adjust.lib.domains.ENUNetworkOptions;
+import com.navfirst.adjust.lib.domains.AdjustOptions;
 import com.navfirst.adjust.lib.domains.ENUNetworkProblem;
 import com.navfirst.adjust.lib.domains.ENUNetworkResult;
 import com.navfirst.adjust.lib.domains.GeodeticNetworkProblem;
@@ -23,24 +22,20 @@ public interface AdjustLibService {
     /** WGS84 JSON 入口，接受直接问题或请求信封，原样返回完整响应信封。 */
     String startAdjustWgs84(String requestJson);
 
-    ENUNetworkResult startAdjust(AdjustRequest request);
-
-    GeodeticNetworkResult startAdjustWgs84(AdjustRequest request);
-
+    /** 使用默认核心配置执行 ENU 平差。 */
     default ENUNetworkResult startAdjust(ENUNetworkProblem problem) {
         return startAdjust(problem, null);
     }
 
-    default ENUNetworkResult startAdjust(ENUNetworkProblem problem, ENUNetworkOptions options) {
-        return startAdjust(AdjustRequest.builder().problem(problem).options(options).build());
-    }
+    /** 执行 ENU 平差，可设置超时和鲁棒开关；options 可为 null。 */
+    ENUNetworkResult startAdjust(ENUNetworkProblem problem, AdjustOptions options);
 
+    /** 使用默认核心配置执行 WGS84 平差；每条基线必须提供 frameWGS84。 */
     default GeodeticNetworkResult startAdjustWgs84(GeodeticNetworkProblem problem) {
         return startAdjustWgs84(problem, null);
     }
 
-    default GeodeticNetworkResult startAdjustWgs84(GeodeticNetworkProblem problem, ENUNetworkOptions options) {
-        return startAdjustWgs84(AdjustRequest.builder().geodeticProblem(problem).options(options).build());
-    }
+    /** 执行 WGS84 平差，可设置超时和鲁棒开关；options 可为 null。 */
+    GeodeticNetworkResult startAdjustWgs84(GeodeticNetworkProblem problem, AdjustOptions options);
 
 }

@@ -14,7 +14,7 @@ public final class Geometry {
     }
 
     /**
-     * 东、北、天三个方向的向量或位置坐标，单位为米。
+     * 东、北、天三个方向的分量；坐标和标准差单位为米，标准化残差无量纲。
      */
     @Data
     @Builder
@@ -22,15 +22,15 @@ public final class Geometry {
     @AllArgsConstructor
     public static class ENU {
 
-        /** 东向分量；坐标、向量和标准差的单位为米，标准化残差及冗余度为无量纲。 */
+        /** 东向分量；坐标、向量和标准差的单位为米，标准化残差为无量纲。 */
         @SerializedName("east")
         private double east;
 
-        /** 北向分量；坐标、向量和标准差的单位为米，标准化残差及冗余度为无量纲。 */
+        /** 北向分量；坐标、向量和标准差的单位为米，标准化残差为无量纲。 */
         @SerializedName("north")
         private double north;
 
-        /** 天向分量，正方向朝上；坐标、向量和标准差的单位为米，标准化残差及冗余度为无量纲。 */
+        /** 天向分量，正方向朝上；坐标、向量和标准差的单位为米，标准化残差为无量纲。 */
         @SerializedName("up")
         private double up;
     }
@@ -84,7 +84,7 @@ public final class Geometry {
     @EqualsAndHashCode
     @ToString
     public static class Matrix3 {
-        /** 按行优先存放的 9 个矩阵元素，索引为 row * 3 + column；协方差单位平方米，轴顺序由所属字段确定为 ENU 或 XYZ。 */
+        /** 按行优先存放的 9 个矩阵元素，索引为 row * 3 + column；协方差单位平方米，按东、北、天三个方向排列。 */
         @SerializedName("data")
         private double[] data = new double[9];
 
@@ -123,29 +123,6 @@ public final class Geometry {
                 throw new IllegalArgumentException("Standard deviations must be finite and non-negative");
             }
             return diagonal(east * east, north * north, up * up);
-        }
-    }
-
-    /** 行优先的稠密矩阵。参数顺序由结果的 parameterKeys 指定。 */
-    @Data
-    @NoArgsConstructor
-    @AllArgsConstructor
-    public static class Matrix {
-        /** 矩阵行数；完整参数协方差的行数等于 parameterKeys 的长度。 */
-        @SerializedName("rows")
-        private int rows;
-        /** 矩阵列数；完整参数协方差的列数等于 parameterKeys 的长度。 */
-        @SerializedName("cols")
-        private int cols;
-        /** 按行优先存放的矩阵元素，长度为 rows * cols，索引为 row * cols + column；协方差单位平方米。 */
-        @SerializedName("data")
-        private double[] data;
-
-        public double at(int row, int column) {
-            if (row < 0 || row >= rows || column < 0 || column >= cols) {
-                throw new IndexOutOfBoundsException("Matrix index outside dimensions");
-            }
-            return data[Math.addExact(Math.multiplyExact(row, cols), column)];
         }
     }
 }
