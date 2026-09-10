@@ -1,0 +1,21 @@
+{
+  "name": "adjust-java-lib-1.0.0.jar",
+  "bytes": 5846684,
+  "sha256": "bbecef94aebfda9ab1d42316539f68ecfbfebf7837b4337197a49f14c975dbd7",
+  "normal_classpath_layout": true,
+  "boot_inf_present": false,
+  "native_resources": [
+    "darwin-aarch64/libAdjust.dylib",
+    "linux-aarch64/libAdjust.so",
+    "linux-x86-64/libAdjust.so"
+  ],
+  "manifest": "Manifest-Version: 1.0\r\nCreated-By: Maven JAR Plugin 3.3.0\r\nBuild-Jdk-Spec: 21\r\nImplementation-Title: adjust-java-lib\r\nImplementation-Version: 1.0.0\r\nAutomatic-Module-Name: com.navfirst.adjust.lib\r\n\r\n",
+  "minimal_compile_exit": 0,
+  "minimal_runtime_exit": 0,
+  "minimal_runtime_output": "1.0.0",
+  "minimal_dependencies": [
+    "adjust-java-lib-1.0.0.jar",
+    "jna-5.12.1.jar",
+    "gson-2.10.1.jar"
+  ]
+}

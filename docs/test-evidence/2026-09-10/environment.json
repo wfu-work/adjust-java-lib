@@ -1,0 +1,9 @@
+{
+  "time": "2026-09-10T14:43:25.567099+08:00",
+  "os": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "java": "java version \"21.0.9\" 2025-10-21 LTS\nJava(TM) SE Runtime Environment (build 21.0.9+7-LTS-338)\nJava HotSpot(TM) 64-Bit Server VM (build 21.0.9+7-LTS-338, mixed mode, sharing)\n",
+  "hardware": "Apple M2",
+  "memory_bytes": "25769803776",
+  "processors": "8"
+}

@@ -1,0 +1,1304 @@
+{
+  "native_version": "1.0.0",
+  "java_version": "21.0.9",
+  "weighted": {
+    "stations": [
+      {
+        "id": "A",
+        "position": {
+          "east": 0.0,
+          "north": 0.0,
+          "up": 0.0
+        },
+        "stddev": {
+          "east": 0.0,
+          "north": 0.0,
+          "up": 0.0
+        }
+      },
+      {
+        "id": "B",
+        "position": {
+          "east": 10.399999999999999,
+          "north": 2.4,
+          "up": 0.7
+        },
+        "stddev": {
+          "east": 0.6928203230275509,
+          "north": 0.6928203230275509,
+          "up": 0.6928203230275509
+        }
+      }
+    ],
+    "baselines": [
+      {
+        "id": "AB1",
+        "from": "A",
+        "to": "B",
+        "adjusted": {
+          "east": 10.399999999999999,
+          "north": 2.4,
+          "up": 0.7
+        },
+        "residual": {
+          "east": -0.3999999999999986,
+          "north": -0.3999999999999999,
+          "up": -0.19999999999999996
+        },
+        "standardized": {
+          "east": -1.154700538379247,
+          "north": -1.1547005383792508,
+          "up": -0.5773502691896254
+        },
+        "weight": 1.0
+      },
+      {
+        "id": "AB2",
+        "from": "A",
+        "to": "B",
+        "adjusted": {
+          "east": 10.399999999999999,
+          "north": 2.4,
+          "up": 0.7
+        },
+        "residual": {
+          "east": 1.6000000000000014,
+          "north": 1.6,
+          "up": 0.8
+        },
+        "standardized": {
+          "east": 1.1547005383792526,
+          "north": 1.1547005383792517,
+          "up": 0.5773502691896258
+        },
+        "weight": 1.0
+      }
+    ],
+    "diagnostics": {
+      "sigma0": 0.7745966692414834,
+      "degrees_of_freedom": 3,
+      "converged": true,
+      "station_covariance_available": true,
+      "residual_diagnostics_available": true,
+      "global_test": {
+        "passed": true,
+        "confidence": 0.95
+      }
+    }
+  },
+  "correlated_loop": {
+    "stations": [
+      {
+        "id": "A",
+        "position": {
+          "east": 0.0,
+          "north": 0.0,
+          "up": 0.0
+        },
+        "stddev": {
+          "east": 0.0,
+          "north": 0.0,
+          "up": 0.0
+        }
+      },
+      {
+        "id": "B",
+        "position": {
+          "east": 9.999064023573535,
+          "north": 1.9936668324978004,
+          "up": 0.49909877157399274
+        },
+        "stddev": {
+          "east": 0.001954949141346286,
+          "north": 0.0029324237120194295,
+          "up": 0.003909898282692573
+        }
+      },
+      {
+        "id": "C",
+        "position": {
+          "east": 3.998545405839807,
+          "north": 12.00020902376488,
+          "up": 0.9982670008801804
+        },
+        "stddev": {
+          "east": 0.002259809249452735,
+          "north": 0.003389713874179103,
+          "up": 0.00451961849890547
+        }
+      },
+      {
+        "id": "D",
+        "position": {
+          "east": -2.9980889365121883,
+          "north": 7.996248823236772,
+          "up": 2.0009721786383983
+        },
+        "stddev": {
+          "east": 0.0024078371097988435,
+          "north": 0.0036117556646982655,
+          "up": 0.004815674219597687
+        }
+      }
+    ],
+    "baselines": [
+      {
+        "id": "L1",
+        "from": "A",
+        "to": "B",
+        "adjusted": {
+          "east": 9.999064023573535,
+          "north": 1.9936668324978004,
+          "up": 0.49909877157399274
+        },
+        "residual": {
+          "east": -0.005064023573535081,
+          "north": -0.001666832497800419,
+          "up": -0.005098771573992744
+        },
+        "standardized": {
+          "east": -2.590261647441407,
+          "north": -0.568392863772738,
+          "up": -1.3040176714618101
+        },
+        "weight": 1.0
+      },
+      {
+        "id": "L2",
+        "from": "A",
+        "to": "C",
+        "adjusted": {
+          "east": 3.998545405839807,
+          "north": 12.00020902376488,
+          "up": 0.9982670008801804
+        },
+        "residual": {
+          "east": 0.0014545941601928902,
+          "north": 0.0017909762351209224,
+          "up": 0.0017329991198196115
+        },
+        "standardized": {
+          "east": 0.6896837921214223,
+          "north": 0.5661177141321436,
+          "up": 0.41084360071326753
+        },
+        "weight": 1.0
+      },
+      {
+        "id": "L3",
+        "from": "A",
+        "to": "D",
+        "adjusted": {
+          "east": -2.9980889365121883,
+          "north": 7.996248823236772,
+          "up": 2.0009721786383983
+        },
+        "residual": {
+          "east": 0.004088936512188113,
+          "north": -0.0022488232367718908,
+          "up": 0.005027821361601514
+        },
+        "standardized": {
+          "east": 1.71745885407702,
+          "north": -0.6297091950006359,
+          "up": 1.0559073598307365
+        },
+        "weight": 1.0
+      },
+      {
+        "id": "L4",
+        "from": "B",
+        "to": "C",
+        "adjusted": {
+          "east": -6.000518617733728,
+          "north": 10.00654219126708,
+          "up": 0.49916822930618765
+        },
+        "residual": {
+          "east": -0.0014813822662720355,
+          "north": -0.0025421912670804403,
+          "up": -0.0021682293061876523
+        },
+        "standardized": {
+          "east": -0.5370853958369342,
+          "north": -0.6144593618450331,
+          "up": -0.39305327250528443
+        },
+        "weight": 1.0
+      },
+      {
+        "id": "L5",
+        "from": "C",
+        "to": "D",
+        "adjusted": {
+          "east": -6.996634342351996,
+          "north": -4.003960200528108,
+          "up": 1.0027051777582179
+        },
+        "residual": {
+          "east": 6.343423519954428E-4,
+          "north": -3.979947189147737E-5,
+          "up": 2.948222417820112E-4
+        },
+        "standardized": {
+          "east": 0.2185479352006531,
+          "north": -0.009141322900898682,
+          "up": 0.050787080501562644
+        },
+        "weight": 1.0
+      },
+      {
+        "id": "L6",
+        "from": "B",
+        "to": "D",
+        "adjusted": {
+          "east": -12.997152960085723,
+          "north": 6.002581990738971,
+          "up": 1.5018734070644055
+        },
+        "residual": {
+          "east": -0.00684703991427682,
+          "north": 0.003418009261029198,
+          "up": -0.007873407064405535
+        },
+        "standardized": {
+          "east": -2.096296613974703,
+          "north": 0.6976407644895373,
+          "up": -1.2052651055197678
+        },
+        "weight": 1.0
+      },
+      {
+        "id": "L7",
+        "from": "A",
+        "to": "B",
+        "adjusted": {
+          "east": 9.999064023573535,
+          "north": 1.9936668324978004,
+          "up": 0.49909877157399274
+        },
+        "residual": {
+          "east": 0.002935976426465814,
+          "north": 0.004333167502199586,
+          "up": 9.012284260072612E-4
+        },
+        "standardized": {
+          "east": 0.7508906860188683,
+          "north": 0.7388195375210608,
+          "up": 0.11524684342900274
+        },
+        "weight": 1.0
+      }
+    ],
+    "diagnostics": {
+      "sigma0": 0.27647684920274407,
+      "degrees_of_freedom": 12,
+      "converged": true,
+      "station_covariance_available": true,
+      "residual_diagnostics_available": true,
+      "global_test": {
+        "passed": false,
+        "confidence": 0.95
+      }
+    }
+  },
+  "oracle_max_coordinate_error_m": 5.329070518200751E-15,
+  "wgs84": {
+    "stations": [
+      {
+        "id": "A",
+        "position_wgs84": {
+          "latitude_deg": 30.5,
+          "longitude_deg": 114.29999999999998,
+          "ellipsoid_height_m": 50.00000000093132
+        },
+        "position_ecef": {
+          "x_m": -2263483.888523723,
+          "y_m": 5013061.122835998,
+          "z_m": 3218279.9225952514
+        },
+        "stddev_xyz": {
+          "x_m": 0.0,
+          "y_m": 0.0,
+          "z_m": 0.0
+        },
+        "m_xyz": 0.0,
+        "wgs84_absolute": true
+      },
+      {
+        "id": "B",
+        "position_wgs84": {
+          "latitude_deg": 30.500018085539846,
+          "longitude_deg": 114.30010421910919,
+          "ellipsoid_height_m": 50.510008157230914
+        },
+        "position_ecef": {
+          "x_m": -2263492.7691826755,
+          "y_m": 5013056.478676461,
+          "z_m": 3218281.9090062836
+        },
+        "stddev_xyz": {
+          "x_m": 0.005867634852461852,
+          "y_m": 0.008441043892636096,
+          "z_m": 0.00665729969587977
+        },
+        "m_xyz": 0.012247448713915688,
+        "wgs84_absolute": true
+      }
+    ],
+    "baselines": [
+      {
+        "id": "AB1",
+        "from": "A",
+        "to": "B",
+        "adjusted_enu": {
+          "east": 10.005,
+          "north": 2.0050000000000003,
+          "up": 0.5099999999999968
+        },
+        "residual_enu": {
+          "east": -0.005000000000000181,
+          "north": -0.005000000000000245,
+          "up": -0.009999999999996685
+        },
+        "standardized": {
+          "east": -1.0000000000000528,
+          "north": -1.0000000000000655,
+          "up": -0.9999999999996849
+        },
+        "weight": 1.0
+      },
+      {
+        "id": "AB2",
+        "from": "A",
+        "to": "B",
+        "adjusted_enu": {
+          "east": 10.005,
+          "north": 2.0050000000000003,
+          "up": 0.5099999999999968
+        },
+        "residual_enu": {
+          "east": 0.004999999999999607,
+          "north": 0.004999999999999704,
+          "up": 0.010000000000002852
+        },
+        "standardized": {
+          "east": 0.999999999999938,
+          "north": 0.9999999999999575,
+          "up": 1.0000000000003018
+        },
+        "weight": 1.0
+      }
+    ],
+    "diagnostics": {
+      "sigma0": 0.7071067811865358,
+      "degrees_of_freedom": 3,
+      "converged": true,
+      "station_covariance_available": true,
+      "residual_diagnostics_available": true,
+      "global_test": {
+        "passed": true,
+        "confidence": 0.95
+      }
+    }
+  },
+  "wgs84_expected_ecef": [
+    -2263492.769182676,
+    5013056.478676461,
+    3218281.9090062827
+  ],
+  "full_response_fields": [
+    "stations",
+    "baselines",
+    "parameter_keys",
+    "formal_covariance",
+    "covariance",
+    "diagnostics"
+  ],
+  "robust": {
+    "huber": {
+      "stations": [
+        {
+          "id": "A",
+          "position": {
+            "east": 0.0,
+            "north": 0.0,
+            "up": 0.0
+          },
+          "stddev": {
+            "east": 0.0,
+            "north": 0.0,
+            "up": 0.0
+          }
+        },
+        {
+          "id": "B",
+          "position": {
+            "east": 10.074170176833695,
+            "north": 2.074170176833694,
+            "up": 0.5746341515939694
+          },
+          "stddev": {
+            "east": 0.19175307243366757,
+            "north": 0.19175307243366757,
+            "up": 0.19175307243366757
+          }
+        }
+      ],
+      "baselines": [
+        {
+          "id": "G0",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.074170176833695,
+            "north": 2.074170176833694,
+            "up": 0.5746341515939694
+          },
+          "residual": {
+            "east": -0.08417017683369465,
+            "north": -0.08417017683369399,
+            "up": -0.07463415159396936
+          },
+          "standardized": {
+            "east": -0.13957421764039155,
+            "north": -0.13957421764039046,
+            "up": -0.1237612145993801
+          },
+          "weight": 0.3075754830027759
+        },
+        {
+          "id": "G1",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.074170176833695,
+            "north": 2.074170176833694,
+            "up": 0.5746341515939694
+          },
+          "residual": {
+            "east": -0.07417017683369487,
+            "north": -0.07417017683369398,
+            "up": -0.07463415159396936
+          },
+          "standardized": {
+            "east": -0.12818971055765804,
+            "north": -0.12818971055765652,
+            "up": -0.1289916068556675
+          },
+          "weight": 0.33149515801129287
+        },
+        {
+          "id": "G2",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.074170176833695,
+            "north": 2.074170176833694,
+            "up": 0.5746341515939694
+          },
+          "residual": {
+            "east": -0.06417017683369508,
+            "north": -0.06417017683369419,
+            "up": -0.07463415159396936
+          },
+          "standardized": {
+            "east": -0.11581791976338421,
+            "north": -0.1158179197633826,
+            "up": -0.1347038859394219
+          },
+          "weight": 0.3582951869434736
+        },
+        {
+          "id": "G3",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.074170176833695,
+            "north": 2.074170176833694,
+            "up": 0.5746341515939694
+          },
+          "residual": {
+            "east": -0.08417017683369465,
+            "north": -0.08417017683369399,
+            "up": -0.07463415159396936
+          },
+          "standardized": {
+            "east": -0.13957421764039155,
+            "north": -0.13957421764039046,
+            "up": -0.1237612145993801
+          },
+          "weight": 0.3075754830027759
+        },
+        {
+          "id": "G4",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.074170176833695,
+            "north": 2.074170176833694,
+            "up": 0.5746341515939694
+          },
+          "residual": {
+            "east": -0.07417017683369487,
+            "north": -0.07417017683369398,
+            "up": -0.07463415159396936
+          },
+          "standardized": {
+            "east": -0.12818971055765804,
+            "north": -0.12818971055765652,
+            "up": -0.1289916068556675
+          },
+          "weight": 0.33149515801129287
+        },
+        {
+          "id": "G5",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.074170176833695,
+            "north": 2.074170176833694,
+            "up": 0.5746341515939694
+          },
+          "residual": {
+            "east": -0.06417017683369508,
+            "north": -0.06417017683369419,
+            "up": -0.07463415159396936
+          },
+          "standardized": {
+            "east": -0.11581791976338421,
+            "north": -0.1158179197633826,
+            "up": -0.1347038859394219
+          },
+          "weight": 0.3582951869434736
+        },
+        {
+          "id": "G6",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.074170176833695,
+            "north": 2.074170176833694,
+            "up": 0.5746341515939694
+          },
+          "residual": {
+            "east": -0.08417017683369465,
+            "north": -0.08417017683369399,
+            "up": -0.07463415159396936
+          },
+          "standardized": {
+            "east": -0.13957421764039155,
+            "north": -0.13957421764039046,
+            "up": -0.1237612145993801
+          },
+          "weight": 0.3075754830027759
+        },
+        {
+          "id": "G7",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.074170176833695,
+            "north": 2.074170176833694,
+            "up": 0.5746341515939694
+          },
+          "residual": {
+            "east": -0.07417017683369487,
+            "north": -0.07417017683369398,
+            "up": -0.07463415159396936
+          },
+          "standardized": {
+            "east": -0.12818971055765804,
+            "north": -0.12818971055765652,
+            "up": -0.1289916068556675
+          },
+          "weight": 0.33149515801129287
+        },
+        {
+          "id": "G8",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.074170176833695,
+            "north": 2.074170176833694,
+            "up": 0.5746341515939694
+          },
+          "residual": {
+            "east": -0.06417017683369508,
+            "north": -0.06417017683369419,
+            "up": -0.07463415159396936
+          },
+          "standardized": {
+            "east": -0.11581791976338421,
+            "north": -0.1158179197633826,
+            "up": -0.1347038859394219
+          },
+          "weight": 0.3582951869434736
+        },
+        {
+          "id": "G9",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.074170176833695,
+            "north": 2.074170176833694,
+            "up": 0.5746341515939694
+          },
+          "residual": {
+            "east": -0.08417017683369465,
+            "north": -0.08417017683369399,
+            "up": -0.07463415159396936
+          },
+          "standardized": {
+            "east": -0.13957421764039155,
+            "north": -0.13957421764039046,
+            "up": -0.1237612145993801
+          },
+          "weight": 0.3075754830027759
+        },
+        {
+          "id": "OUT",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.074170176833695,
+            "north": 2.074170176833694,
+            "up": 0.5746341515939694
+          },
+          "residual": {
+            "east": 4.925829823166305,
+            "north": 4.925829823166306,
+            "up": 4.925365848406031
+          },
+          "standardized": {
+            "east": 3.1621802749126857,
+            "north": 3.1621802749126866,
+            "up": 3.161882422187832
+          },
+          "weight": 0.05
+        }
+      ],
+      "diagnostics": {
+        "sigma0": 17.547430857483324,
+        "degrees_of_freedom": 30,
+        "converged": false,
+        "station_covariance_available": true,
+        "residual_diagnostics_available": true
+      },
+      "warnings": [
+        "global chi-square test is omitted after data-dependent robust reweighting",
+        "robust adjustment reached the iteration limit"
+      ]
+    },
+    "plain": {
+      "stations": [
+        {
+          "id": "A",
+          "position": {
+            "east": 0.0,
+            "north": 0.0,
+            "up": 0.0
+          },
+          "stddev": {
+            "east": 0.0,
+            "north": 0.0,
+            "up": 0.0
+          }
+        },
+        {
+          "id": "B",
+          "position": {
+            "east": 10.453636363636361,
+            "north": 2.453636363636363,
+            "up": 0.9545454545454544
+          },
+          "stddev": {
+            "east": 0.45461066198945477,
+            "north": 0.45461066198945477,
+            "up": 0.45461066198945477
+          }
+        }
+      ],
+      "baselines": [
+        {
+          "id": "G0",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.453636363636361,
+            "north": 2.453636363636363,
+            "up": 0.9545454545454544
+          },
+          "residual": {
+            "east": -0.4636363636363612,
+            "north": -0.4636363636363632,
+            "up": -0.45454545454545436
+          },
+          "standardized": {
+            "east": -0.32250605578691355,
+            "north": -0.32250605578691494,
+            "up": -0.3161824076342305
+          },
+          "weight": 1.0
+        },
+        {
+          "id": "G1",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.453636363636361,
+            "north": 2.453636363636363,
+            "up": 0.9545454545454544
+          },
+          "residual": {
+            "east": -0.4536363636363614,
+            "north": -0.45363636363636317,
+            "up": -0.45454545454545436
+          },
+          "standardized": {
+            "east": -0.3155500428189606,
+            "north": -0.3155500428189618,
+            "up": -0.3161824076342305
+          },
+          "weight": 1.0
+        },
+        {
+          "id": "G2",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.453636363636361,
+            "north": 2.453636363636363,
+            "up": 0.9545454545454544
+          },
+          "residual": {
+            "east": -0.4436363636363616,
+            "north": -0.4436363636363634,
+            "up": -0.45454545454545436
+          },
+          "standardized": {
+            "east": -0.3085940298510077,
+            "north": -0.3085940298510089,
+            "up": -0.3161824076342305
+          },
+          "weight": 1.0
+        },
+        {
+          "id": "G3",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.453636363636361,
+            "north": 2.453636363636363,
+            "up": 0.9545454545454544
+          },
+          "residual": {
+            "east": -0.4636363636363612,
+            "north": -0.4636363636363632,
+            "up": -0.45454545454545436
+          },
+          "standardized": {
+            "east": -0.32250605578691355,
+            "north": -0.32250605578691494,
+            "up": -0.3161824076342305
+          },
+          "weight": 1.0
+        },
+        {
+          "id": "G4",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.453636363636361,
+            "north": 2.453636363636363,
+            "up": 0.9545454545454544
+          },
+          "residual": {
+            "east": -0.4536363636363614,
+            "north": -0.45363636363636317,
+            "up": -0.45454545454545436
+          },
+          "standardized": {
+            "east": -0.3155500428189606,
+            "north": -0.3155500428189618,
+            "up": -0.3161824076342305
+          },
+          "weight": 1.0
+        },
+        {
+          "id": "G5",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.453636363636361,
+            "north": 2.453636363636363,
+            "up": 0.9545454545454544
+          },
+          "residual": {
+            "east": -0.4436363636363616,
+            "north": -0.4436363636363634,
+            "up": -0.45454545454545436
+          },
+          "standardized": {
+            "east": -0.3085940298510077,
+            "north": -0.3085940298510089,
+            "up": -0.3161824076342305
+          },
+          "weight": 1.0
+        },
+        {
+          "id": "G6",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.453636363636361,
+            "north": 2.453636363636363,
+            "up": 0.9545454545454544
+          },
+          "residual": {
+            "east": -0.4636363636363612,
+            "north": -0.4636363636363632,
+            "up": -0.45454545454545436
+          },
+          "standardized": {
+            "east": -0.32250605578691355,
+            "north": -0.32250605578691494,
+            "up": -0.3161824076342305
+          },
+          "weight": 1.0
+        },
+        {
+          "id": "G7",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.453636363636361,
+            "north": 2.453636363636363,
+            "up": 0.9545454545454544
+          },
+          "residual": {
+            "east": -0.4536363636363614,
+            "north": -0.45363636363636317,
+            "up": -0.45454545454545436
+          },
+          "standardized": {
+            "east": -0.3155500428189606,
+            "north": -0.3155500428189618,
+            "up": -0.3161824076342305
+          },
+          "weight": 1.0
+        },
+        {
+          "id": "G8",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.453636363636361,
+            "north": 2.453636363636363,
+            "up": 0.9545454545454544
+          },
+          "residual": {
+            "east": -0.4436363636363616,
+            "north": -0.4436363636363634,
+            "up": -0.45454545454545436
+          },
+          "standardized": {
+            "east": -0.3085940298510077,
+            "north": -0.3085940298510089,
+            "up": -0.3161824076342305
+          },
+          "weight": 1.0
+        },
+        {
+          "id": "G9",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.453636363636361,
+            "north": 2.453636363636363,
+            "up": 0.9545454545454544
+          },
+          "residual": {
+            "east": -0.4636363636363612,
+            "north": -0.4636363636363632,
+            "up": -0.45454545454545436
+          },
+          "standardized": {
+            "east": -0.32250605578691355,
+            "north": -0.32250605578691494,
+            "up": -0.3161824076342305
+          },
+          "weight": 1.0
+        },
+        {
+          "id": "OUT",
+          "from": "A",
+          "to": "B",
+          "adjusted": {
+            "east": 10.453636363636361,
+            "north": 2.453636363636363,
+            "up": 0.9545454545454544
+          },
+          "residual": {
+            "east": 4.546363636363639,
+            "north": 4.546363636363637,
+            "up": 4.545454545454546
+          },
+          "standardized": {
+            "east": 3.1624564411575764,
+            "north": 3.162456441157575,
+            "up": 3.1618240763423064
+          },
+          "weight": 1.0
+        }
+      ],
+      "diagnostics": {
+        "sigma0": 75.38864957570526,
+        "degrees_of_freedom": 30,
+        "converged": true,
+        "station_covariance_available": true,
+        "residual_diagnostics_available": true,
+        "global_test": {
+          "passed": false,
+          "confidence": 0.95
+        }
+      }
+    }
+  },
+  "zero_redundancy": {
+    "stations": [
+      {
+        "id": "A",
+        "position": {
+          "east": 0.0,
+          "north": 0.0,
+          "up": 0.0
+        },
+        "stddev": {
+          "east": 0.0,
+          "north": 0.0,
+          "up": 0.0
+        }
+      },
+      {
+        "id": "B",
+        "position": {
+          "east": 10.0,
+          "north": 2.0,
+          "up": 0.5
+        },
+        "stddev": {
+          "east": 1.0,
+          "north": 1.0,
+          "up": 1.0
+        }
+      }
+    ],
+    "baselines": [
+      {
+        "id": "AB1",
+        "from": "A",
+        "to": "B",
+        "adjusted": {
+          "east": 10.0,
+          "north": 2.0,
+          "up": 0.5
+        },
+        "residual": {
+          "east": 0.0,
+          "north": 0.0,
+          "up": 0.0
+        },
+        "standardized": {
+          "east": 0.0,
+          "north": 0.0,
+          "up": 0.0
+        },
+        "weight": 1.0
+      }
+    ],
+    "diagnostics": {
+      "sigma0": 1.0,
+      "degrees_of_freedom": 0,
+      "converged": true,
+      "station_covariance_available": true,
+      "residual_diagnostics_available": true
+    }
+  },
+  "invalid_json": "{\"ok\":false,\"result\":null,\"error\":{\"code\":\"invalid_json\",\"message\":\"unexpected end of JSON input\"}}",
+  "missing_covariance": {
+    "id": "AB1",
+    "field": "baselines.covariance",
+    "code": "invalid_covariance"
+  },
+  "unanchored_error": {
+    "field": "stations",
+    "code": "disconnected_network"
+  },
+  "missing_frame_error": {
+    "field": "common_frame_origin_wgs84",
+    "code": "invalid_problem"
+  },
+  "concurrent": {
+    "batch_ms": 19.043833,
+    "calls": 80,
+    "threads": 4
+  },
+  "performance": [
+    {
+      "stations": 10,
+      "baselines": 18,
+      "parameters": 27,
+      "utf8_request_bytes": 3209,
+      "first_ms": 1.1365,
+      "warmup_calls": 3,
+      "measured_ms": [
+        0.983417,
+        1.053459,
+        1.00275,
+        0.940292,
+        1.137042,
+        1.171,
+        1.066583,
+        1.04525,
+        1.03725,
+        0.947667,
+        0.954833,
+        1.064125,
+        1.800833,
+        1.099,
+        1.277917
+      ],
+      "median_ms": 1.053459,
+      "p95_nearest_rank_ms": 1.800833
+    },
+    {
+      "stations": 50,
+      "baselines": 98,
+      "parameters": 147,
+      "utf8_request_bytes": 16827,
+      "first_ms": 7.086583,
+      "warmup_calls": 3,
+      "measured_ms": [
+        6.516583,
+        6.14025,
+        6.949833,
+        6.679792,
+        6.601209,
+        5.883833,
+        5.96475,
+        5.451334,
+        6.00125,
+        5.805875,
+        5.469042,
+        5.692959,
+        5.726542,
+        5.149333,
+        5.867667
+      ],
+      "median_ms": 5.883833,
+      "p95_nearest_rank_ms": 6.949833
+    },
+    {
+      "stations": 150,
+      "baselines": 298,
+      "parameters": 447,
+      "utf8_request_bytes": 51475,
+      "first_ms": 53.992084,
+      "warmup_calls": 3,
+      "measured_ms": [
+        51.435125,
+        50.515041,
+        52.194833,
+        47.986709,
+        50.120333,
+        50.106375,
+        47.405292,
+        47.670375,
+        48.188625,
+        47.748791,
+        48.274125,
+        47.365125,
+        47.611125,
+        48.121458,
+        47.74675
+      ],
+      "median_ms": 48.121458,
+      "p95_nearest_rank_ms": 52.194833
+    }
+  ],
+  "checks": [
+    {
+      "id": "weighted_analytic",
+      "passed": true,
+      "ms": 43.41975
+    },
+    {
+      "id": "correlated_loop_numpy_oracle",
+      "passed": true,
+      "ms": 6.046542
+    },
+    {
+      "id": "wgs84_ecef_independent_rotation",
+      "passed": true,
+      "ms": 10.257458
+    },
+    {
+      "id": "typed_vs_full_json_enu",
+      "passed": true,
+      "ms": 5.022833
+    },
+    {
+      "id": "typed_vs_full_json_wgs84",
+      "passed": true,
+      "ms": 5.4855
+    },
+    {
+      "id": "robust_outlier",
+      "passed": true,
+      "ms": 7.880917
+    },
+    {
+      "id": "zero_redundancy_diagnostics",
+      "passed": true,
+      "ms": 0.997792
+    },
+    {
+      "id": "core_option_mapping",
+      "passed": true,
+      "ms": 0.20175
+    },
+    {
+      "id": "null_and_default_options",
+      "passed": true,
+      "ms": 0.188667
+    },
+    {
+      "id": "timeout_bounds",
+      "passed": true,
+      "ms": 0.941333
+    },
+    {
+      "id": "null_problem",
+      "passed": true,
+      "ms": 0.10475
+    },
+    {
+      "id": "empty_json",
+      "passed": true,
+      "ms": 0.116375
+    },
+    {
+      "id": "nul_and_surrogate_rejected",
+      "passed": true,
+      "ms": 1.258875
+    },
+    {
+      "id": "utf8_request_limit",
+      "passed": true,
+      "ms": 210.800375
+    },
+    {
+      "id": "nonfinite_serialization",
+      "passed": true,
+      "ms": 0.795791
+    },
+    {
+      "id": "matrix_defensive_copy",
+      "passed": true,
+      "ms": 0.042292
+    },
+    {
+      "id": "native_invalid_json_raw_envelope",
+      "passed": true,
+      "ms": 0.272084
+    },
+    {
+      "id": "missing_covariance",
+      "passed": true,
+      "ms": 0.632292
+    },
+    {
+      "id": "zero_covariance",
+      "passed": true,
+      "ms": 0.322208
+    },
+    {
+      "id": "asymmetric_covariance",
+      "passed": true,
+      "ms": 0.261666
+    },
+    {
+      "id": "unknown_station",
+      "passed": true,
+      "ms": 0.275875
+    },
+    {
+      "id": "duplicate_station",
+      "passed": true,
+      "ms": 0.238583
+    },
+    {
+      "id": "unanchored_network",
+      "passed": true,
+      "ms": 0.219458
+    },
+    {
+      "id": "missing_wgs84_frame",
+      "passed": true,
+      "ms": 0.324292
+    },
+    {
+      "id": "invalid_response_contract",
+      "passed": true,
+      "ms": 0.190708
+    },
+    {
+      "id": "business_error_fields",
+      "passed": true,
+      "ms": 0.10875
+    },
+    {
+      "id": "spring_auto_configuration",
+      "passed": true,
+      "ms": 204.55
+    },
+    {
+      "id": "spring_disabled",
+      "passed": true,
+      "ms": 3.784333
+    },
+    {
+      "id": "spring_custom_bean",
+      "passed": true,
+      "ms": 9.39425
+    },
+    {
+      "id": "concurrent_4_threads_80_calls",
+      "passed": true,
+      "ms": 20.784709
+    },
+    {
+      "id": "repeatability_20_calls",
+      "passed": true,
+      "ms": 5.326209
+    },
+    {
+      "id": "performance_10_stations",
+      "passed": true,
+      "ms": 21.02075
+    },
+    {
+      "id": "performance_50_stations",
+      "passed": true,
+      "ms": 119.276291
+    },
+    {
+      "id": "performance_150_stations",
+      "passed": true,
+      "ms": 890.945291
+    }
+  ],
+  "passed": 34,
+  "failed": 0
+}
