@@ -1,0 +1,15 @@
+/Users/wfu/Documents/works/navfirst/code/nav-whu/adjust-java-lib/src/main/resources/darwin-aarch64/libAdjust.dylib: Mach-O 64-bit dynamically linked shared library arm64
+/Users/wfu/Documents/works/navfirst/code/nav-whu/adjust-java-lib/src/main/resources/linux-aarch64/libAdjust.so:     ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[sha1]=3575be0e8b1e8b15e37e8c09bf091c753c3f130c, with debug_info, not stripped
+/Users/wfu/Documents/works/navfirst/code/nav-whu/adjust-java-lib/src/main/resources/linux-x86-64/libAdjust.so:      ELF 64-bit LSB shared object, x86-64, version 1 (SYSV), dynamically linked, BuildID[sha1]=54ec14ff0439d7bb8b1c59ad3b1d7d5948bd3efe, with debug_info, not stripped
+/Users/wfu/Documents/works/navfirst/code/nav-whu/adjust-java-lib/src/main/resources/darwin-aarch64/libAdjust.dylib:
+	libAdjust.dylib (compatibility version 0.0.0, current version 0.0.0)
+	/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation (compatibility version 150.0.0, current version 5026.5.4)
+	/usr/lib/libresolv.9.dylib (compatibility version 1.0.0, current version 1.0.0)
+	/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1356.0.0)
+
+C exports:
+000000000011c174 T _adjustFree
+000000000011c114 T _adjustValidate
+000000000011c004 T _getVersion
+000000000011c054 T _startAdjust
+000000000011c0b4 T _startAdjustWgs84

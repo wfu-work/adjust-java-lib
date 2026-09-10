@@ -1,0 +1,7 @@
+{
+  "scripts/report-tests/AdjustReportProbe.java": "0a1f08c7e8b839b1c9175fddc95cc0fbbf7d109a1b2781fac06b4951fcfe85dc",
+  "scripts/report-tests/README.md": "bc8a81b154e824f3f23b67829f4397f60d82a3800c12073b935ee4e879f4911a",
+  "scripts/report-tests/run_checks.py": "4da75b4990d5a673d4c8bee78df736d31bb5e810ce386e197e8b594371b03ca1",
+  "scripts/report-tests/make_fixture.py": "a6dc8b2275d57c1e30afe07abb837f7dc7f1812862d311d6e3e13e5c685686be",
+  "docs/test-evidence/2026-09-10/correlated-fixture.json": "70635b668bb36a2689a809b4e31ccd882856dc127988ed1a9c44a32740220442"
+}

@@ -1,0 +1,9 @@
+{
+  "source_directory": "docs/test-evidence/2026-09-10",
+  "reason": "Static native interface inspection retained; production Java, POM and native resources match the prior SHA-256 manifest.",
+  "files": {
+    "native-api-reference.h": "ff9d4c0280e3514710341c67009f9a33426e5b1d8ef3401dd51496d266c7f3d3",
+    "native-inspection.txt": "312445fddabce3d867157a5c2d19fae6872e520f95486838fc0ada8f16b1bd55",
+    "native-reference.json": "ad37a43ca2eb0022ced3269bf49086e8e25d3c67ac6007b14ea2967d49d9a3b3"
+  }
+}

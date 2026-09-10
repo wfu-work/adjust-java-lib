@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "AdjustReportProbe.java": "76f0f6911af74634f3c52a83303c09b01daafd4b42c0f2b924d4d970a6315eb7",
+    "run_checks.py": "d27dd7980c7060f8d486ac52069aeef2bd63ba640458e40f605d4257709737b2",
+    "make_fixture.py": "54e402f1320fa18e9376d3eed137aee80401db2f5f9c7f35ccecf607075d7fed"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "fixture_sha256": "50676f98df98c9a83427956327a5d3ae5d1e269e227d36c669e50f0952b8150f"
+}

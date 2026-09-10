@@ -1,0 +1,22 @@
+{
+  "name": "adjust-java-lib-1.0.0.jar",
+  "bytes": 5846684,
+  "sha256": "974d71abc1a6137faaf58150094a1214fa92524c4b1d761b42a2d47809317693",
+  "normal_classpath_layout": true,
+  "boot_inf_present": false,
+  "native_resources": [
+    "darwin-aarch64/libAdjust.dylib",
+    "linux-aarch64/libAdjust.so",
+    "linux-x86-64/libAdjust.so"
+  ],
+  "plain_consumer": {
+    "compile_exit": 0,
+    "run_exit": 0,
+    "native_version": "1.0.0",
+    "classpath_artifacts": [
+      "adjust-java-lib-1.0.0.jar",
+      "jna-5.12.1.jar",
+      "gson-2.10.1.jar"
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+javac --release 20 -proc:none; compiled EnuExample.java and Wgs84Example.java against built SDK JAR
+exit=0
